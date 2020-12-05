@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      "app-one-lib": [
+        "dist/app-one-lib/app-one-lib",
+        "dist/app-one-lib"
+      ],
+      "galaxy-commons": [
+        "dist/galaxy-commons/galaxy-commons",
+        "dist/galaxy-commons"
+      ]
+    }
+  }
+}
