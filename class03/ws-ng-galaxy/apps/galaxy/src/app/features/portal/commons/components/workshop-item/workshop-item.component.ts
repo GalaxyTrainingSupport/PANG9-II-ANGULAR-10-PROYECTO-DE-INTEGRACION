@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Workshop } from '../../../models/workshop.model';
 
 @Component({
   selector: 'app-workshop-item',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkshopItemComponent implements OnInit {
 
+  @Input() workshop: Workshop;
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

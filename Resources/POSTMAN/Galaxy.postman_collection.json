@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "96321922-46d5-4037-8d71-734296b75542",
+		"name": "Galaxy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Instructor: Get All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/instructors",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"instructors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instructor: Get One",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/instructors/5ee1ed075991e60017fd64a4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"instructors",
+						"5ee1ed075991e60017fd64a4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instructor: Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullName\": \"Luis Vilcarromero Ortiz\",\n\t\"mail\": \"luis.vilcarromero@galaxy.edu.pe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/instructors",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"instructors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instructor: Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullName\": \"Luis Vilcarromero\",\n\t\"mail\": \"luis.vilcarromero@galaxy.edu.pe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/instructors/5ee2cd683f130355d047d510",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"instructors",
+						"5ee2cd683f130355d047d510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Instructor: Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/instructors/5ee2cd683f130355d047d510",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"instructors",
+						"5ee2cd683f130355d047d510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Get All Portal",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/workshops/portal",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops",
+						"portal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Get All Admin",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/workshops",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Get One",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/workshops/5ec47a2efe8c1b52bc8514d8",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops",
+						"5ec47a2efe8c1b52bc8514d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"instructor\": \"5ec35a4d6fb9ba35d8df9f2e\",\n\t\"name\": \"Modelo de Seguridad y Conformidad en AWS\",\n\t\"description\": \"La seguridad y conformidad son una responsabilidad compartida de AWS y el cliente. Este modelo compartido alivia la carga operativa del cliente, ya que AWS opera, administra y controla los componentes del sistema operativo host y la capa de virtualización hasta la seguridad física de las instalaciones en las que funcionan los servicios. El cliente asume la responsabilidad y la administración del sistema operativo invitado, software, aplicaciones asociadas y de configuración del firewall del grupo de seguridad de AWS. Acompañanos a esta charla donde hablaremos de la Responsabilidad de AWS y tú responsabilidad como cliente.\",\n\t\"date\": \"2020-05-24\",\n\t\"start\": 7,\n\t\"startMeridiem\": \"pm\",\n\t\"end\": 9,\n\t\"endMeridiem\": \"pm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/workshops",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"instructor\": \"5ec35a4d6fb9ba35d8df9f2e\",\n\t\"name\": \"Modelo de Seguridad y Conformidad en AWS\",\n\t\"description\": \"La seguridad y conformidad son una responsabilidad compartida de AWS y el cliente. Este modelo compartido alivia la carga operativa del cliente, ya que AWS opera, administra y controla los componentes del sistema operativo host y la capa de virtualización hasta la seguridad física de las instalaciones en las que funcionan los servicios. El cliente asume la responsabilidad y la administración del sistema operativo invitado, software, aplicaciones asociadas y de configuración del firewall del grupo de seguridad de AWS. Acompañanos a esta charla donde hablaremos de la Responsabilidad de AWS y tú responsabilidad como cliente.\",\n\t\"date\": \"2020-05-24\",\n\t\"start\": 7,\n\t\"startMeridiem\": \"pm\",\n\t\"end\": 9,\n\t\"endMeridiem\": \"pm\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/workshops/5ee2cf623f130355d047d511",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops",
+						"5ee2cf623f130355d047d511"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/workshops/5ee2cf623f130355d047d511",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops",
+						"5ee2cf623f130355d047d511"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Update Poster",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "poster",
+							"type": "file",
+							"src": "/C:/Users/everis/Desktop/performance bseg/taller-gratuito-online-hadoo.png"
+						}
+					],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/workshops/5ec47b2cfe8c1b52bc8514dc/poster",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops",
+						"5ec47b2cfe8c1b52bc8514dc",
+						"poster"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Workshop: Report Participants",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/workshops/participants?start=2020-05-01&end=2020-05-10",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"workshops",
+						"participants"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2020-05-01"
+						},
+						{
+							"key": "end",
+							"value": "2020-05-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"admin@galaxy.edu.pe\",\r\n\t\"password\": \"Root1234.\",\r\n\t\"names\": \"Luis\",\r\n\t\"lastNames\": \"Vilcarromero\",\r\n\t\"documentNumber\": \"11111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/sign-up",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User: Sign In",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "049494f5-4811-46ff-8b0f-9442742d6c81",
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"student@galaxy.edu.pe\",\n\t\"password\": \"Root1234.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/auth/sign-in",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Participant: Register or Unregister",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"workshop\": \"5ec47a2efe8c1b52bc8514d8\",\r\n    \"register\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/participants",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"participants"
+					]
+				},
+				"description": "Api para participar o dejar de participar en un taller determinado\r\n\r\nComo cuerpo recibe\r\n- workshop: ID del taller\r\n- register: true para participar, false para dejar de participar\r\n\r\nInternamente se identifica al usuario con el token de autenticación\r\n\r\n\r\n\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Participant: Is Registered",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/participants/5ec47a2efe8c1b52bc8514d8",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"participants",
+						"5ec47a2efe8c1b52bc8514d8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
