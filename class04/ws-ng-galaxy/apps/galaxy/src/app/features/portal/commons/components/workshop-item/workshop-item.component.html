@@ -1,0 +1,18 @@
+<img [src]="workshop?.poster" alt="">
+
+<div>
+  <h2>TALLER GRATUITO</h2>
+  <p>{{ workshop?.description }}</p>
+  <mat-chip-list>
+    <mat-chip>
+      <mat-icon>event</mat-icon>
+      <span>Día {{ workshop?.date }} </span>
+    </mat-chip>
+    <mat-chip>
+      <mat-icon>query_builder</mat-icon>
+      <span>Hora: {{ workshop?.displayTime }}</span>
+    </mat-chip>
+  </mat-chip-list>
+  <br>
+  <button mat-raised-button color="primary">PARTICIPAR</button>
+</div>
