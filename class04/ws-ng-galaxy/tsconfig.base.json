@@ -16,14 +16,7 @@
       "dom"
     ],
     "paths": {
-      "app-one-lib": [
-        "dist/app-one-lib/app-one-lib",
-        "dist/app-one-lib"
-      ],
-      "galaxy-commons": [
-        "dist/galaxy-commons/galaxy-commons",
-        "dist/galaxy-commons"
-      ]
+      "@galaxy/commons/*": ["libs/galaxy-commons/src/lib"]
     }
   }
 }

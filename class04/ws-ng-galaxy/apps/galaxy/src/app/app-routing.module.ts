@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { PortalComponent } from './features/portal/portal.component';
 
 const routes: Routes = [
-  { path: '', loadChildren: () => import('./features/portal/portal.module').then(m => m.PortalModule) }
+  { path: '', loadChildren: () => import('./features/portal/portal.module').then(m => m.PortalModule) },
+  { path: 'auth', loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule) }
 ];
 
 @NgModule({

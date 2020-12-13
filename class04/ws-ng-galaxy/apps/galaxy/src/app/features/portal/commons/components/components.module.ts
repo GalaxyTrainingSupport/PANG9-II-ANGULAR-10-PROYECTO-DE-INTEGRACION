@@ -6,6 +6,9 @@ import { WorkshopItemComponent } from './workshop-item/workshop-item.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 
+import { GlxDefaultImgModule } from '../../../../../../../../libs/galaxy-commons/src/lib/pipes/default-img/default-img.module';
+// import { GlxDefaultImgModule } from '@galaxy/commons/pipes/default-img/default-img.module';
+
 const COMPONENTS = [
   WorkshopItemComponent
 ];
@@ -20,7 +23,7 @@ const ANGULAR_MODULES = [
   CommonModule,
 ];
 
-const LIB_MODULES = [];
+const LIB_MODULES = [ GlxDefaultImgModule ];
 
 @NgModule({
   declarations: COMPONENTS,

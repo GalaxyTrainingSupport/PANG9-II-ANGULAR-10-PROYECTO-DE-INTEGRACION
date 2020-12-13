@@ -8,18 +8,6 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/app-one/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/app-one/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/app-one-lib/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/app-one-lib/tsconfig.spec.json"
-    },
-    {
       "path": "./apps/galaxy/tsconfig.app.json"
     },
     {
