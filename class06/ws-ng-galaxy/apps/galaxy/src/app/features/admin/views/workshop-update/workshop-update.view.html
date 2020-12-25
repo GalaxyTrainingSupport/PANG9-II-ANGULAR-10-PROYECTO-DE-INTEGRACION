@@ -1,0 +1,14 @@
+<app-workshop-update-poster
+  class="mat-elevation-z4"
+  [poster]="presenter.workshop?.poster"
+  (upload)="presenter.updatePoster($event)"
+>
+</app-workshop-update-poster>
+
+<app-workshop-form
+  [instructors]="presenter.instructors"
+  [workshop]="presenter.workshop"
+  (save)="presenter.updateWorkshop($event)"
+  (cancel)="presenter.goBack()"
+>
+</app-workshop-form>

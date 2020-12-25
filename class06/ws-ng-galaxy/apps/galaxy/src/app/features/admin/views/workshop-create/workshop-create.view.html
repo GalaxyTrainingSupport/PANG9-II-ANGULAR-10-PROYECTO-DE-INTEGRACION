@@ -1,0 +1,6 @@
+<app-workshop-form
+  [instructors]="presenter.instructors"
+  (save)="presenter.createWorkshop($event)"
+  (cancel)="presenter.goBack()"
+>
+</app-workshop-form>

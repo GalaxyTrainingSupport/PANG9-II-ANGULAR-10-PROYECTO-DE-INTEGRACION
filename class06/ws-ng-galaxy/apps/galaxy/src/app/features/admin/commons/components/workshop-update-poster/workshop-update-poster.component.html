@@ -1,0 +1,14 @@
+
+<lib-img-preview [src]="poster" [file]="fileControl.value" ></lib-img-preview>
+
+<div>
+  <lib-input-file [formControl]="fileControl" accept="image/*"></lib-input-file>
+  <button class="btn-upload"
+    mat-raised-button color="primary"
+    [disabled]="fileControl.invalid"
+    (click)="send()">
+  <mat-icon>cloud</mat-icon>
+  <span>Subir Poster</span>
+  </button>
+</div>
+
