@@ -1,19 +1,26 @@
 <img [src]="workshop.poster | defaultImg">
 <!-- <img src="assets/img-not-found.png" alt=""> -->
-
 <div>
-  <h2>TALLER GRATUITO</h2>
+  <h3>
+    TALLER GRATUITO
+    <br>
+    <span> {{ workshop?.name }} </span>
+  </h3>
   <p>{{ workshop?.description }}</p>
-  <mat-chip-list>
-    <mat-chip>
-      <mat-icon>event</mat-icon>
-      <span>Día {{ workshop?.date }} </span>
-    </mat-chip>
-    <mat-chip>
-      <mat-icon>query_builder</mat-icon>
-      <span>Hora: {{ workshop?.displayTime }}</span>
-    </mat-chip>
-  </mat-chip-list>
+  <div class="chip-list">
+    <mat-chip-list>
+      <mat-chip>
+        <mat-icon>event</mat-icon>
+        <span>Día {{ workshop?.date }} </span>
+      </mat-chip>
+    </mat-chip-list>
+    <mat-chip-list>
+      <mat-chip>
+        <mat-icon>query_builder</mat-icon>
+        <span>Hora: {{ workshop?.displayTime }}</span>
+      </mat-chip>
+    </mat-chip-list>
+  </div>
   <br>
   <button mat-raised-button color="primary">PARTICIPAR</button>
 </div>

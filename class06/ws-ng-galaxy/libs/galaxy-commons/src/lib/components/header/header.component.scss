@@ -1,0 +1,68 @@
+:host {
+  display: block;
+  background-color: #ffffff;
+  width: 100%;
+  margin-bottom: 20px;
+
+  hr {
+    margin: 0;
+    color: #8b8a8a;
+  }
+
+  button {
+    height: 50px;
+    width: 130px;
+    text-align: center;
+
+    span {
+      margin-left: 5px;
+    }
+  }
+
+  button.cart {
+    background-color: rgb(56, 117, 248);
+    color: #ffffff;
+  }
+
+  .content {
+    height: 50px;
+    width: 74%;
+    margin: 0 auto;
+    align-items: center;
+
+    .buttons {
+      display: inline;
+      float: right;
+    }
+  }
+
+  .content>span {
+    float: left;
+    margin-top: 20px;
+  }
+
+  nav {
+    height: 95px;
+    width: 74%;
+    margin-left: 13%;
+    display: inline-flex;
+    align-items: center;
+
+    img {
+      height: 95px;
+      margin-right: 70px;
+    }
+
+    ul {
+      width: 100%;
+      li {
+        display: inline;
+        margin-left: 3%;
+        font-weight: bold;
+        font-size: 1.05em;
+        letter-spacing: 0.1em;
+        color: #696868;
+      }
+    }
+  }
+}

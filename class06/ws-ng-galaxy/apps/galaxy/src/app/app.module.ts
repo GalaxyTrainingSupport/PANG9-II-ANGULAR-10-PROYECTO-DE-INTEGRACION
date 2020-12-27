@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GlxAuthenticationModule } from '@galaxy/commons/guards/authentication/authentication.module';
+import { GlxHeaderModule } from '@galaxy/commons/components/header/header.module';
+import { GlxFooterModule } from '@galaxy/commons/components/footer/footer.module'
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { GlxAuthenticationModule } from '@galaxy/commons/guards/authentication/a
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    GlxAuthenticationModule
+    GlxAuthenticationModule,
+    GlxHeaderModule,
+    GlxFooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

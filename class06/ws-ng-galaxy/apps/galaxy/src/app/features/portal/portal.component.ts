@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-portal',
@@ -8,13 +7,9 @@ import { Router } from '@angular/router';
 })
 export class PortalComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  toLogin(): void {
-    this.router.navigateByUrl('auth');
   }
 
 }
