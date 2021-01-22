@@ -1,0 +1,32 @@
+
+<!-- [(value)] => [value]="" (valueChange)=""-->
+<!--
+<glx-input-file [(ngModel)]="file" (ngModelChange)="onChange()"></glx-input-file>
+
+<form [formGroup]="">
+
+  <input type="text" formControlName="">
+  <input type="text" [formControl]="">
+
+</form>
+
+-->
+
+<glx-img-preview [src]="poster | glxDefaultImg" [file]="fileControl.value" ></glx-img-preview>
+
+<div>
+  <glx-input-file [formControl]="fileControl" accept="image/*"></glx-input-file>
+
+  <span class="mat-error" *ngIf="fileControl.hasError('extension') && fileControl.touched">
+    {{ fileControl.getError('extension') }}
+  </span>
+
+  <button class="btn-upload"
+          mat-raised-button color="primary"
+          [disabled]="fileControl.invalid"
+          (click)="send()">
+    <mat-icon>cloud</mat-icon>
+    <span>Subir Poster</span>
+  </button>
+</div>
+

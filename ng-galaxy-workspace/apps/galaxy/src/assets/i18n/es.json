@@ -1,0 +1,10 @@
+{
+  "HELLO": "Hola {{ name }}, bienvenido",
+  "LOG-IN": "Iniciar Sesión",
+  "LOG-OUT": "Cerrar Sesión",
+  "LANG": {
+    "ES": "Español",
+    "EN": "Ingles"
+  }
+
+}

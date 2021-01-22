@@ -1,0 +1,22 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Inicio</mat-label>
+    <input matInput formControlName="start" [matDatepicker]="datepickerStart" readonly>
+    <mat-datepicker-toggle matSuffix [for]="datepickerStart"></mat-datepicker-toggle>
+    <mat-datepicker #datepickerStart></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Fin</mat-label>
+    <input matInput formControlName="end" [matDatepicker]="datepickerEnd" readonly>
+    <mat-datepicker-toggle matSuffix [for]="datepickerEnd"></mat-datepicker-toggle>
+    <mat-datepicker #datepickerEnd></mat-datepicker>
+    <mat-error *ngIf="formGroup.get('end').hasError('invalid')">
+      {{ formGroup.get('end').getError('invalid') }}
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button [disabled]="formGroup.invalid">Buscar</button>
+
+</form>

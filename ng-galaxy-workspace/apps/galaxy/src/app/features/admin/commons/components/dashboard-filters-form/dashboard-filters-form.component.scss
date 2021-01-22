@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  margin: auto;
+  background: white;
+  width: max-content;
+  padding: 20px;
+  border-radius: 4px;
+
+  mat-form-field {
+    width: 150px;
+  }
+
+  button,
+  mat-form-field:last-child {
+    margin-left: 10px;
+  }
+
+}

@@ -1,0 +1,9 @@
+{
+  "HELLO": "Hello {{ name }}, welcome",
+  "LOG-IN": "Login",
+  "LOG-OUT": "Logout",
+  "LANG": {
+    "ES": "Spanish",
+    "EN": "English"
+  }
+}

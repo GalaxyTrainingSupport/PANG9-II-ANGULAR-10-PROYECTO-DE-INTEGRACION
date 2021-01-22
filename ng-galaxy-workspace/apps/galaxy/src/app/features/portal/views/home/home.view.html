@@ -1,0 +1,6 @@
+
+<app-workshop-item
+  *ngFor="let workshop of presenter.workshops"
+  [workshop]="workshop"
+  (register)="presenter.registerWorkshop(workshop.id, !workshop.registered)">
+</app-workshop-item>

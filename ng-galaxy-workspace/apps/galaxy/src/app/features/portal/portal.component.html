@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar class="mat-elevation-z8" color="primary">
+      <mat-toolbar-row>
+        <span>Custom Toolbar</span>
+
+        <div>
+          <button mat-button routerLink="/auth" *ngIf="!session.isAuthenticated">
+            {{ 'LOG-IN' | translate }}
+          </button>
+
+          <button mat-button (click)="session.destroy()" *ngIf="session.isAuthenticated">
+            {{ 'LOG-OUT' | translate }}
+          </button>
+
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>language</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="setLanguage('es')" >{{ 'LANG.ES' | translate }}</button>
+            <button mat-menu-item (click)="setLanguage('en')">{{ 'LANG.EN' | translate }}</button>
+          </mat-menu>
+
+          <mat-slide-toggle [(ngModel)]="themeService.isDark" >Oscuro</mat-slide-toggle>
+
+
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
